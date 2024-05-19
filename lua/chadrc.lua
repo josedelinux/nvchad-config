@@ -7,7 +7,13 @@ local M = {}
 M.ui = {
   theme = "onedark",
 
+  transparency = false;
   nvdash = { load_on_startup = true },
+
+  statusline = {
+    -- also try Ctrl + g
+    theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
+  },
 
   -- hl_override = {
   -- 	Comment = { italic = true },

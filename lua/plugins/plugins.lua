@@ -30,6 +30,25 @@ local plugins = {
   },
 
   {
+    "lewis6991/gitsigns.nvim",
+    opts = {
+      numhl = true, -- Toggle with `:Gitsigns toggle_numhl`
+      linehl = false, -- Toggle with `:Gitsigns toggle_linehl` -- it could be harder to find out
+      word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff` -- why no space ph?
+
+      -- also be aware that you can always use space gb(Git Blame)
+      current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
+      current_line_blame_opts = {
+        virt_text = true,
+        virt_text_pos = "eol", -- 'eol' | 'overlay' | 'right_align'
+        delay = 100, -- defaults: 1000
+        ignore_whitespace = false,
+        virt_text_priority = 100,
+      },
+    },
+  },
+
+  {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
