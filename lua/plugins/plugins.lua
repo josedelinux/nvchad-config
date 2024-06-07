@@ -1,6 +1,6 @@
-local on_attach = require("nvchad.configs.lspconfig").on_attach
-local capabilities = require("nvchad.configs.lspconfig").capabilities
-local on_init = require("nvchad.configs.lspconfig").on_init
+-- local on_attach = require("nvchad.configs.lspconfig").on_attach
+-- local capabilities = require("nvchad.configs.lspconfig").capabilities
+-- local on_init = require("nvchad.configs.lspconfig").on_init
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -19,14 +19,24 @@ local plugins = {
         "lua-language-server",
         "stylua",
 
+        "clangd",
+        "clang-format",
+
+        "gopls",
+        "goimports",
+
+        "pyright",
+        "ruff",
+        -- ya que tenemos `ruff`
+        -- "black",
+        -- "isort",
+
+        "typescript-language-server",
         "html-lsp",
         "css-lsp",
         "prettier",
 
-        "clangd",
-        "clang-format",
-
-        "pyright",
+        "codespell",
       },
     },
   },
