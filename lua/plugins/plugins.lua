@@ -25,6 +25,8 @@ local plugins = {
 
         "clangd",
         "clang-format",
+
+        "pyright",
       },
     },
   },
@@ -83,6 +85,15 @@ local plugins = {
         "markdown_inline",
       },
     },
+  },
+
+  {
+    "RRethy/vim-illuminate",
+    lazy = false,
+    config = function()
+      require("illuminate").configure()
+    end,
+    -- enabled = false,
   },
 }
 

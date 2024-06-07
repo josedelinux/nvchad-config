@@ -7,7 +7,7 @@ local M = {}
 M.ui = {
   theme = "onedark",
 
-  transparency = false,
+  transparency = true,
 
   nvdash = {
     load_on_startup = true,
