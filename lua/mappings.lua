@@ -12,3 +12,7 @@ map("c", "W", "w")
 map("c", "Q", "q")
 
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+
+map("n", "<leader>tt", function()
+  require("base46").toggle_transparency()
+end, { desc = "Toggle Transparency" })
