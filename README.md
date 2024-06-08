@@ -10,7 +10,7 @@ ref: <https://nodejs.org/en/download/package-manager>
 
 ### install nvchad
 
-Make sure gcc, make, latest go, nerdfont, latest nodejs is installed 
+Make sure gcc, make, latest go, latest nodejs, ripgrep, fd is installed 
 
 ```bash
 # clone starter

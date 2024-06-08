@@ -78,13 +78,21 @@ local plugins = {
 
         -- low level
         "c",
+        "cpp",
+        "rust",
+
+        -- go
+        "go",
+        "gomod",
+        "gowork",
+        "gosum",
+
+        -- python
+        "python",
 
         -- build system
         "make",
         "cmake",
-
-        -- go
-        "go",
 
         -- shells
         "bash",
@@ -93,6 +101,13 @@ local plugins = {
         -- markdown
         "markdown",
         "markdown_inline",
+
+        -- git
+        "git_config",
+        "gitcommit",
+        "git_rebase",
+        "gitignore",
+        "gitattributes",
       },
     },
   },
@@ -103,7 +118,7 @@ local plugins = {
     config = function()
       require("illuminate").configure()
     end,
-    -- enabled = false,
+    -- enabled = false, -- This plugin causes freezing when opening big files
   },
 }
 

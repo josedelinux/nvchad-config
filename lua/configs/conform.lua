@@ -10,6 +10,7 @@ local options = {
         return { "isort", "black" }
       end
     end,
+    -- ref: https://www.lazyvim.org/extras/formatting/prettier
     css = { "prettier" },
     html = { "prettier" },
     markdown = { "prettier" },
