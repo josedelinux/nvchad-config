@@ -13,6 +13,11 @@ map("c", "Q", "q")
 
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
+-- gitsigns navigation
+map("n", "]c", "<cmd>Gitsigns next_hunk<CR>", { desc = "Next hunk" })
+map("n", "[c", "<cmd>Gitsigns prev_hunk<CR>", { desc = "Previous hunk" })
+-- other mappings : https://github.com/NvChad/NvChad/blob/164e8cc7fcb9006a1edd4ddfc98bf8c7f4fe2e0d/lua/nvchad/configs/gitsigns.lua#L20
+
 map("n", "<leader>tt", function()
   require("base46").toggle_transparency()
 end, { desc = "Toggle Transparency" })
