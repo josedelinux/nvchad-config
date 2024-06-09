@@ -26,8 +26,8 @@ map({ "n", "t" }, "<M-g>", function()
       -- ocupamos toda la pantalla
       width = 1,
       height = 1,
-      -- ref: https://github.com/NvChad/ui/blob/v2.5/lua/nvchad/term/init.lua#L39   
-      -- ref: https://neovim.io/doc/user/api.html#nvim_open_win()
+      -- ref: https://github.com/NvChad/ui/blob/v2.5/lua/nvchad/term/init.lua#L39
+      -- ref: https://neovim.io/doc/user/api.html#api-win_config
     },
     clear_cmd = true,
   }
