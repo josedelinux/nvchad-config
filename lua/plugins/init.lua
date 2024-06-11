@@ -25,13 +25,16 @@ return {
 
         "clangd",
         "clang-format",
+        "cpplint",
 
         "gopls",
         "goimports",
+        "golangci-lint",
 
         "pyright",
         "ruff",
         "mypy",
+        "pylint",
         -- ya que tenemos `ruff`
         -- "black",
         -- "isort",
@@ -40,6 +43,13 @@ return {
         "html-lsp",
         "css-lsp",
         "prettier",
+        "eslint_d",
+
+        "shellcheck",
+
+        "vale", -- markdown
+
+        "yamllint",
 
         "codespell",
       },

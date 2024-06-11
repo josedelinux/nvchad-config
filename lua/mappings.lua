@@ -14,9 +14,14 @@ map("c", "Q", "q")
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 -- gitsigns navigation
-map("n", "]c", "<cmd>Gitsigns next_hunk<CR>", { desc = "Next hunk" })
-map("n", "[c", "<cmd>Gitsigns prev_hunk<CR>", { desc = "Previous hunk" })
+map("n", "]c", "<cmd>Gitsigns next_hunk<CR>", { desc = "Jump To next hunk" })
+map("n", "[c", "<cmd>Gitsigns prev_hunk<CR>", { desc = "Jump To previous hunk" })
 -- other mappings : https://github.com/NvChad/NvChad/blob/164e8cc7fcb9006a1edd4ddfc98bf8c7f4fe2e0d/lua/nvchad/configs/gitsigns.lua#L20
+
+-- vim-illuminate builtin mappings:
+-- <A-n/p> navigate and <A-i> to selete text
+map("o", "<a-t>", require("illuminate").textobj_select) -- `h mapmode-o`
+map("n", "<a-t>", require("illuminate").textobj_select)
 
 map("n", "<leader>tt", function()
   require("base46").toggle_transparency()
@@ -37,3 +42,7 @@ map({ "n", "t" }, "<M-g>", function()
     clear_cmd = true,
   }
 end, { desc = "Toggle Lazygit" })
+
+map("n", "<leader>ll", function()
+  require("lint").try_lint()
+end, { desc = "Lint current buffer" })
