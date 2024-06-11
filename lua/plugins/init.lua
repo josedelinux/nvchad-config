@@ -26,6 +26,7 @@ return {
         "clangd",
         "clang-format",
         "cpplint",
+        -- "cppcheck", -- need to install manually
 
         "gopls",
         "goimports",

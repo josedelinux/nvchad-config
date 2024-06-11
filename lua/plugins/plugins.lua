@@ -35,6 +35,9 @@ local plugins = {
       local lint = require "lint"
 
       lint.linters_by_ft = {
+        -- you have to install cppcheck yourself since it's not provided in mason
+        c = { "clangtidy", "cpplint", "cppcheck" },
+        cpp = { "clangtidy", "cpplint", "cppcheck" },
         javascript = { "eslint_d" },
         javascriptreact = { "eslint_d" },
         typescript = { "eslint_d" },
