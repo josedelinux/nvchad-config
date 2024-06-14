@@ -34,10 +34,26 @@ local plugins = {
     config = function()
       local lint = require "lint"
 
+      local cpp_linters = {}
+      -- check for availability one by one
+      if vim.fn.executable "cppcheck" == 1 then
+        table.insert(cpp_linters, "cppcheck")
+      end
+
+      if vim.fn.executable "clang-tidy" == 1 then
+        table.insert(cpp_linters, "clangtidy")
+      end
+
+      if vim.fn.executable "cpplint" == 1 then
+        table.insert(cpp_linters, "cpplint")
+      end
+      -- print(vim.inspect(cpp_linters))
+
       lint.linters_by_ft = {
-        -- you have to install cppcheck yourself since it's not provided in mason
-        c = { "clangtidy", "cpplint", "cppcheck" },
-        cpp = { "clangtidy", "cpplint", "cppcheck" },
+        -- c = { "clangtidy", "cpplint", "cppcheck" },
+        -- cpp = { "clangtidy", "cpplint", "cppcheck" },
+        c = cpp_linters,
+        cpp = cpp_linters,
         javascript = { "eslint_d" },
         javascriptreact = { "eslint_d" },
         typescript = { "eslint_d" },
