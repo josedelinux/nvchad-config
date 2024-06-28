@@ -14,7 +14,7 @@ Make sure gcc, make, latest go, latest nodejs, ripgrep, fd is installed
 
 ```bash
 # clone starter
-git clone git@github.com:josedelinux/nvchad-config.git ~/.config/nvim
+git clone https://github.com/josedelinux/nvchad-config.git ~/.config/nvim
 
 # start nvim
 nvim
