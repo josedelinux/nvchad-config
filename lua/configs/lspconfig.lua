@@ -8,6 +8,7 @@ local servers = {
   "clangd",
   "gopls",
   "pyright",
+  "marksman",
   "html",
   "cssls",
 }
