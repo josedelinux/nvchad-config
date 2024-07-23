@@ -45,6 +45,11 @@ map("n", "<leader>tt", function()
   require("base46").toggle_transparency()
 end, { desc = "Toggle Transparency" })
 
+map("n", "<leader>ti", function()
+  ---@diagnostic disable-next-line
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end, { desc = "Toggle Inlay Hints" })
+
 map({ "n", "t" }, "<M-g>", function()
   require("nvchad.term").toggle {
     cmd = "lazygit",
