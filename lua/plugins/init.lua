@@ -28,6 +28,9 @@ return {
         "cpplint",
         -- "cppcheck", -- need to install manually
 
+        "rust-analyzer",
+        -- "rustfmt", -- install via rustup `rustup component add rustfmt`
+
         "gopls",
         "goimports",
         "golangci-lint",

@@ -76,8 +76,8 @@ local plugins = {
     end,
   },
   {
-    'nvim-pack/nvim-spectre',
-  }
+    "nvim-pack/nvim-spectre",
+  },
 }
 
 return plugins

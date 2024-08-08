@@ -12,6 +12,7 @@ local servers = {
   "html",
   "cssls",
   "tsserver",
+  "rust_analyzer",
 }
 
 local on_attach_with_inlay = function(client, buffer)
