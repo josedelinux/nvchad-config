@@ -2,9 +2,9 @@
 -- https://github.com/NvChad/ui/blob/v2.5/lua/nvconfig.lua
 
 ---@type ChadrcConfig
-local options = {}
+local M = {}
 
-options.ui = {
+M.base46 = {
   theme = "onedark",
 
   transparency = true,
@@ -32,4 +32,4 @@ options.ui = {
   -- },
 }
 
-return options
+return M
