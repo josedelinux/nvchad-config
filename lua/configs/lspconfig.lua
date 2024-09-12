@@ -9,7 +9,7 @@ local servers = {
   "marksman",
   "html",
   "cssls",
-  "tsserver",
+  "ts_ls",
   "rust_analyzer",
 }
 
