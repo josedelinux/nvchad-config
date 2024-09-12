@@ -1,4 +1,4 @@
--- This file needs to have same structure as nvconfig.lua 
+-- This file needs to have same structure as nvconfig.lua
 -- https://github.com/NvChad/ui/blob/v2.5/lua/nvconfig.lua
 
 ---@type ChadrcConfig
@@ -30,6 +30,48 @@ M.base46 = {
   -- 	Comment = { italic = true },
   -- 	["@comment"] = { italic = true },
   -- },
+
+  mason = {
+    pkgs = {
+      "lua-language-server",
+      "stylua",
+
+      "clangd",
+      "clang-format",
+      "cpplint",
+      -- "cppcheck", -- need to install manually
+
+      "rust-analyzer",
+      -- "rustfmt", -- install via rustup `rustup component add rustfmt`
+
+      "gopls",
+      "goimports",
+      "golangci-lint",
+
+      "pyright",
+      "ruff",
+      "mypy",
+      "pylint",
+      -- ya que tenemos `ruff`
+      -- "black",
+      -- "isort",
+
+      "typescript-language-server",
+      "html-lsp",
+      "css-lsp",
+      "prettier",
+      "eslint_d",
+
+      "shellcheck",
+
+      "marksman",
+      "vale", -- markdown
+
+      "yamllint",
+
+      "codespell",
+    },-- pkg
+  }, -- mason
 }
 
 return M
