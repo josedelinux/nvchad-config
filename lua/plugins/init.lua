@@ -24,6 +24,15 @@ return {
   {
     "lewis6991/gitsigns.nvim",
     opts = {
+      signs = {
+        add = { text = "+" },
+        change = { text = "│" },
+        -- delete = { text = "󰍵" }, -- nvchad default
+        topdelete = { text = "‾" },
+        -- changedelete = { text = "󱕖" }, -- nvchad default
+        changedelete = { text = "~" },
+        untracked = { text = "┆" },
+      },
       numhl = true, -- Toggle with `:Gitsigns toggle_numhl`
       linehl = false, -- Toggle with `:Gitsigns toggle_linehl` -- it could be harder to find out
       word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff` -- why no space ph?

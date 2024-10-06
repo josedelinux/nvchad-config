@@ -2,6 +2,8 @@
 -- local capabilities = require("nvchad.configs.lspconfig").capabilities
 -- local on_init = require("nvchad.configs.lspconfig").on_init
 
+-- These are non-builtin plugins
+
 ---@type NvPluginSpec[]
 local plugins = {
   {

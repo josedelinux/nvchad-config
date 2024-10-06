@@ -35,6 +35,9 @@ map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 map("n", "]c", "<cmd>Gitsigns next_hunk<CR>", { desc = "Jump To next hunk" })
 map("n", "[c", "<cmd>Gitsigns prev_hunk<CR>", { desc = "Jump To previous hunk" })
 -- other mappings : https://github.com/NvChad/NvChad/blob/164e8cc7fcb9006a1edd4ddfc98bf8c7f4fe2e0d/lua/nvchad/configs/gitsigns.lua#L20
+map("n", "<leader>rh", "<cmd>Gitsigns reset_hunk<CR>", { desc = "Gitsigns Reset Hunk" })
+map("n", "<leader>ph", "<cmd>Gitsigns preview_hunk<CR>", { desc = "Gitsigns Preview Hunk" })
+map("n", "<leader>gb", "<cmd>Gitsigns blame_line<CR>", { desc = "Gitsigns Blame Line" })
 
 -- vim-illuminate builtin mappings:
 -- <A-n/p> navigate and <A-i> to delete text
