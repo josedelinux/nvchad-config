@@ -45,6 +45,7 @@ map("n", "<leader>tt", function()
   require("base46").toggle_transparency()
 end, { desc = "Toggle Transparency" })
 
+-- inlay hint
 map("n", "<leader>ti", function()
   ---@diagnostic disable-next-line
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
@@ -83,3 +84,20 @@ map("v", "<leader>sw", '<esc><cmd>lua require("spectre").open_visual()<CR>', {
 map("n", "<leader>sp", '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
   desc = "Search on current file",
 })
+
+-- NvChad menu
+
+-- mouse users + nvimtree users!
+map({ "n", "v" }, "<RightMouse>", function()
+  vim.cmd.exec '"normal! \\<RightMouse>"'
+
+  local options = vim.bo.ft == "NvimTree" and "nvimtree" or "default"
+  require("menu").open(options, { mouse = true, border = true })
+end, {})
+
+-- Keyboard users
+vim.keymap.set("n", "<A-m>", function()
+  -- require("menu").open "default"
+  local options = vim.bo.ft == "NvimTree" and "nvimtree" or "default"
+  require("menu").open(options, { border = true })
+end, {})
