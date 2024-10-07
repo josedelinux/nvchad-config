@@ -32,8 +32,11 @@ end, { noremap = true, expr = true, nowait = true })
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 -- gitsigns navigation
-map("n", "]c", "<cmd>Gitsigns next_hunk<CR>", { desc = "Jump To next hunk" })
-map("n", "[c", "<cmd>Gitsigns prev_hunk<CR>", { desc = "Jump To previous hunk" })
+map("n", "]c", "<cmd>Gitsigns next_hunk<CR>", { desc = "Jump to Next hunk" })
+map("n", "[c", "<cmd>Gitsigns prev_hunk<CR>", { desc = "Jump to Previous hunk" })
+
+map("n", "]h", "<cmd>Gitsigns next_hunk<CR>", { desc = "Jump to Next hunk" })
+map("n", "[h", "<cmd>Gitsigns prev_hunk<CR>", { desc = "Jump to Previous hunk" })
 -- other mappings : https://github.com/NvChad/NvChad/blob/164e8cc7fcb9006a1edd4ddfc98bf8c7f4fe2e0d/lua/nvchad/configs/gitsigns.lua#L20
 map("n", "<leader>rh", "<cmd>Gitsigns reset_hunk<CR>", { desc = "Gitsigns Reset Hunk" })
 map("n", "<leader>ph", "<cmd>Gitsigns preview_hunk<CR>", { desc = "Gitsigns Preview Hunk" })
@@ -99,8 +102,18 @@ map({ "n", "v" }, "<RightMouse>", function()
 end, {})
 
 -- Keyboard users
-vim.keymap.set("n", "<A-m>", function()
+map("n", "<A-m>", function()
   -- require("menu").open "default"
   local options = vim.bo.ft == "NvimTree" and "nvimtree" or "default"
   require("menu").open(options, { border = true })
 end, {})
+
+-- todo-comment.nvim
+
+map("n", "]t", function()
+  require("todo-comments").jump_next()
+end, { desc = "Jump to Next todo-comments" })
+
+map("n", "[t", function()
+  require("todo-comments").jump_prev()
+end, { desc = "Jump to Previous todo-comments" })
