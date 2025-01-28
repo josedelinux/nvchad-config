@@ -64,6 +64,7 @@ M.base46 = {
       "eslint_d",
 
       "shellcheck",
+      "shfmt",
 
       "marksman",
       "vale", -- markdown
