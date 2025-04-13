@@ -68,6 +68,7 @@ M.base46 = {
 
       "marksman",
       "vale", -- markdown
+      "markdownlint", -- markdown
 
       "yamllint",
 
